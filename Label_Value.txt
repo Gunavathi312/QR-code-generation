@@ -1,0 +1,1 @@
+<img broder=0 src="datacontent/Image/qrcode/<pega:reference name=".QRFileName"/>.png" />

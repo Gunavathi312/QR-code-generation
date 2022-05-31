@@ -1,0 +1,12 @@
+try {
+java.security.MessageDigest hasher=java.security.MessageDigest.getInstance("SHA1");
+hasher.update( (byte[]) imagebytes);
+byte[] hash=hasher.digest();
+StringBuilder sb = new StringBuilder(2 * hash.length);
+for (byte b : hash) {
+sb.append("0123456789ABCDEF".charAt((b & 0xF0) >> 4));
+sb.append("0123456789ABCDEF".charAt((b & 0x0F)));
+}
+filename = sb.toString();
+}
+catch(Exception e) { throw new PRRuntimeException(e); }
